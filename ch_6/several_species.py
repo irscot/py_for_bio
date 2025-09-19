@@ -21,4 +21,4 @@ for section in data:
     
     # using conditional for species name for Drosophila melanogaster and Drosophila simulans
     if species_name == "Drosophila melanogaster" or species_name == "Drosophila simulans":
-        print(gene_name)
+        print(f"{species_name}: {gene_name}\n")
