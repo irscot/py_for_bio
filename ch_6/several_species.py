@@ -18,4 +18,7 @@ for section in data:
     section = section.rstrip().split(",")
     species_name = section[0]
     gene_name = section[2]
-    print(f"Species name: {species_name}\nGene name: {gene_name}")    
+    
+    # using conditional for species name for Drosophila melanogaster and Drosophila simulans
+    if species_name == "Drosophila melanogaster" or species_name == "Drosophila simulans":
+        print(gene_name)
