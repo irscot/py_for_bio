@@ -17,4 +17,5 @@ for section in data:
     # which brings each line into a list
     section = section.rstrip().split(",")
     species_name = section[0]
-    print(species_name)
+    gene_name = section[2]
+    print(f"Species name: {species_name}\nGene name: {gene_name}")    
