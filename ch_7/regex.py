@@ -12,7 +12,7 @@ if re.search(r"C(T|G)G", dna):
 
 # ? = makes something optional - match either 0 or 1 time
 # ACT or ACTG will be looked for in the dna string
-# if one or both are found then it do the action
+# if one or both are found then it will do the action
 if re.search(r"ACT(G)?", dna):
     print("restriction found!")
 
