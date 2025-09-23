@@ -6,7 +6,9 @@ Printing out the gene names for all genes belonging to
 # reading the data from the csv file
 # each line is a row while each field in a line is a column
 
-# first index[0] = species name, second index[1] = sequence, third index[2] = gene name, fourth index[3] = bases in sequence
+# first index[0] = species name, second index[1] = sequence, 
+# third index[2] = gene name, fourth index[3] = expression level
+
 data = open(r"C:\Users\irsco\repos\py_for_bio\ch_6\data.csv")
 
 # writing for loop to loop over the data and print out gene names
