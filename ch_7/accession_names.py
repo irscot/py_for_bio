@@ -58,3 +58,11 @@ for accession_name in accession_names:
     # long accesion names with many numbers in a row
     if re.search(r"[0123456789]{3,}", accession_name):
         print(f"- {accession_name}")
+
+# end with d followed by either a, r or p
+print("Accession names ending with d followed by either a, r or p:")
+# end point will be either an a, r or p (a|r|p)$
+# needs to be followed up by a d = d(a|r|p)$
+for accession_name in accession_names:
+    if re.search(r"d(a|r|p)$", accession_name):
+        print(f"- {accession_name}")
