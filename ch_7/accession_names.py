@@ -14,8 +14,6 @@ criteria – treat each criterion separately:
 """
 import re
 
-import re
-
 
 # creating list of accession names
 accession_names = ["xkn59438", "yhdck2", "eihd39d9", "chdsye847", "hedle3455", "xjhd53e", "45da", "de37dp"]
@@ -67,4 +65,5 @@ print("Accession names ending with d followed by either a, r or p:")
 # needs to be followed up by a d = d(a|r|p)$
 # using "5" to find any accession name that has 5
 for accession_name in accession_names:
-    ...
+    if re.search(r"d(a|r|p)$", accession_name):
+        print(f"- {accession_name}")
