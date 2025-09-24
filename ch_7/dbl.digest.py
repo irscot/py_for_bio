@@ -18,7 +18,14 @@ restriction_cuts = [0]
 
 # need a search for restriction enzyme AbcI 
 # that will look for A then any A|T|G|C and then TAAT
-print("AbcI cut location:")
+print("Restriction Enzyme Cut Locations:")
 for match in re.finditer(r"A(A|T|G|C)TAAT", dna):
     # ATG is the starting codon so we need to start 3 bases in with +3
-    print(match.start() + 3)
+    # using append to get the cut locations and add them to 
+    # restriction_cuts list
+    restriction_cuts.append(match.start() + 3)
+
+# getting the entire length of the dna
+# to append it as the end point for the locations
+restriction_cuts.append(len(dna))
+print(restriction_cuts)
