@@ -6,8 +6,6 @@ criteria – treat each criterion separately:
 
 • contain the number 5
 • contain the letter d or e
-• contain the letters d and e in that order
-• contain the letters d and e in that order with a single letter between them
 • contain both the letters d and e in any order
 • start with x or y
 • start with x or y and end with e
@@ -26,8 +24,14 @@ for accession_name in accession_names:
     if re.search(r"5", accession_name):
         print(f"- {accession_name}")
 
-# contain number d or e
+# contain the letter d or e
 print("Accession names with the letter d and/or e:")
 for accession_name in accession_names:
     if re.search(r"d|e", accession_name):
+        print(f"- {accession_name}")
+
+# contain both the letters d and e in any order
+print("Accession names with the letter d and e:")
+for accession_name in accession_names:
+    if re.search(r"d.*e|e.*d", accession_name):
         print(f"- {accession_name}")
