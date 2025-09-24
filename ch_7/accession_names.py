@@ -49,3 +49,12 @@ for accession_name in accession_names:
     # any characters after it then end with an e
     if re.search(r"(^x|^y).*e$", accession_name):
         print(f"- {accession_name}")
+
+# contain three or more numbers in a row
+print("Accession names that have three or more numbers in a row:")
+for accession_name in accession_names:
+    # sectioning off numbers 0 to 9
+    # with a range 3 to an unlimited amount in case of 
+    # long accesion names with many numbers in a row
+    if re.search(r"[0123456789]{3,}", accession_name):
+        print(f"- {accession_name}")
