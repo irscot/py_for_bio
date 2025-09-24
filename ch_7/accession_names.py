@@ -26,5 +26,8 @@ for accession_name in accession_names:
     if re.search(r"5", accession_name):
         print(f"- {accession_name}")
 
-
-
+# contain number d or e
+print("Accession names with the letter d and/or e:")
+for accession_name in accession_names:
+    if re.search(r"d|e", accession_name):
+        print(f"- {accession_name}")
