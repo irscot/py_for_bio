@@ -35,3 +35,9 @@ print("Accession names with the letter d and e:")
 for accession_name in accession_names:
     if re.search(r"d.*e|e.*d", accession_name):
         print(f"- {accession_name}")
+
+# start with x or y
+print("Accession names that start with x or y:")
+for accession_name in accession_names:
+    if re.search(r"^x|^y", accession_name):
+        print(f"- {accession_name}")
