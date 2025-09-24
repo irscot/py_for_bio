@@ -41,3 +41,11 @@ print("Accession names that start with x or y:")
 for accession_name in accession_names:
     if re.search(r"^x|^y", accession_name):
         print(f"- {accession_name}")
+
+# start with x or y and end with e
+print("Accession names that start with x or y and end with e:")
+for accession_name in accession_names:
+    # sectioning off previous regex and adding onto it to include
+    # any characters after it then end with an e
+    if re.search(r"(^x|^y).*e$", accession_name):
+        print(f"- {accession_name}")
