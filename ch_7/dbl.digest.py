@@ -13,6 +13,9 @@ import re
 # opening dna.txt as dna to read in python file
 dna = open(r"ch_7\dna.txt").read()
 
+# making list with starting point 0 for all restriciton enzyme cuts
+restriction_cuts = [0]
+
 # need a search for restriction enzyme AbcI 
 # that will look for A then any A|T|G|C and then TAAT
 print("AbcI cut location:")
