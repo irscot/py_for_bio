@@ -8,4 +8,7 @@ restriction enzymes – AbcI, whose
 recognition site is ANT*AAT, and AbcII, whose recognition site 
 is GCRW*TG (asterisks indicate the position of the cut site)
 """
+import re
 
+# opening dna.txt as dna
+dna = open()
