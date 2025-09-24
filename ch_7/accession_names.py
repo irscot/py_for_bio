@@ -14,10 +14,17 @@ criteria – treat each criterion separately:
 • contain three or more numbers in a row
 • end with d followed by either a, r or p
 """
+import re
+
 
 # creating list of accession names
 accession_names = ["xkn59438", "yhdck2", "eihd39d9", "chdsye847", "hedle3455", "xjhd53e", "45da", "de37dp"]
 
 # contain number 5
+print("Accession names with a 5:")
 for accession_name in accession_names:
-    ...
+    if re.search(r"5", accession_name):
+        print(f"- {accession_name}")
+
+
+
