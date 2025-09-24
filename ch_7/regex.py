@@ -42,7 +42,7 @@ if re.search(r"TA{1}C", dna):
 
 # practicing group method
 k = re.search(r"TA{1}C", dna)
-print("Found:", k.group())
+print("Found:", k.group()) # type: ignore
 
 # you can also do a range 
 # with this example: TA{1,3}C you can have either 1,2,or 3 Cs leading
@@ -52,7 +52,7 @@ if re.search(r"TA{1,3}C", dna):
 
 # practicing group method
 l = re.search(r"TA{1,3}C", dna)
-print("Found:", l.group())
+print("Found:", l.group()) # type: ignore
 
 # POSITIONS
 # ^ = matches the start of the string
@@ -69,7 +69,7 @@ dna_two = "ATGACGTACGTACGACTG"
 m = re.search(r"GA[ATGC]{3}AC", dna_two)
 
 # calling group() method shows us the macthed part of the DNA sequence
-print(m.group())
+print(m.group()) # type: ignore
 
 # USING CAPTURING 
 
@@ -82,15 +82,15 @@ dna_three = "ATGACGTACGTACGACTG"
 n = re.search(r"GA([ATGC]{3})AC([ATGC]{2})AC", dna_three)
 
 # printing out the entire match
-print("entire match: " + n.group())
+print("entire match: " + n.group()) # type: ignore
 
 # printing out the first captured bit
 # in other words, only printing what comes after GA that is in parenthesis
-print("first bit: " + n.group(1))
+print("first bit: " + n.group(1)) # type: ignore
 
 # printing out the second captured bit
 # in other words, printing only what comes after the 3 bases that is in parenthesis
-print("second bit: " + n.group(2))
+print("second bit: " + n.group(2)) # type: ignore
 
 # POSTION MATCHING
 dna_four = "ATGACGTACGTACGACTG"
@@ -98,11 +98,11 @@ o = re.search(r"GA([ATGC]{3})AC([ATGC]{2})AC", dna_four)
 
 # using start() method to print out the index position of where the search begins within dna
 # C is the starting part of the search which is index 2
-print("start: " + str(o.start()))
+print("start: " + str(o.start())) # type: ignore
 
 # using end() method to print out the index positon of where the search ends with dna
 # C is the end part of the search which is index 13
-print("end: " + str(o.end()))
+print("end: " + str(o.end())) # type: ignore
 
 # CONNECTION: it is like slicing it starts at the index you are searching for
 # and ends with the index right after the one you want to look for
