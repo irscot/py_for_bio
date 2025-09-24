@@ -10,5 +10,12 @@ is GCRW*TG (asterisks indicate the position of the cut site)
 """
 import re
 
-# opening dna.txt as dna
-dna = open()
+# opening dna.txt as dna to read in python file
+dna = open(r"ch_7\dna.txt").read()
+
+# need a search for restriction enzyme AbcI 
+# that will look for A then any A|T|G|C and then TAAT
+print("AbcI cut location:")
+for match in re.finditer(r"A(A|T|G|C)TAAT", dna):
+    # ATG is the starting codon so we need to start 3 bases in with +3
+    print(match.start() + 3)
