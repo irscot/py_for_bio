@@ -10,3 +10,8 @@ print(enzymes['BisI'])
 # adding KpnI - GGTACC
 enzymes['KpnI'] = r'GGTACC'
 print(enzymes)
+
+# removing AvaII restiction enzyme
+enzymes.pop('AvaII')
+print(enzymes)
+
