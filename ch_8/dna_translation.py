@@ -34,3 +34,7 @@ gencode = {
 print(f"codon_one ({codon_one}) amino acid is {gencode[codon_one]}.")
 print(f"codon_two ({codon_two}) amino acid is {gencode[codon_two]}.")
 print(f"codon_three ({codon_three}) amino acid is {gencode[codon_three]}.")
+
+print(f"Orginal DNA: {dna}")
+print(f"Original DNA codons: {codon_one}, {codon_two} and {codon_three}")
+print(f"codon amino acids: {gencode[codon_one]}, {gencode[codon_two]} and {gencode[codon_three]}")
