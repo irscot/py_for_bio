@@ -14,4 +14,3 @@ print(enzymes)
 # removing AvaII restiction enzyme
 enzymes.pop('AvaII')
 print(enzymes)
-
