@@ -11,7 +11,7 @@ print(codon_one, codon_two, codon_three)
 
 # translate each codon into the corresponding amino acid residue
 
-# adding genocode dictionary
+# adding gencode dictionary
 gencode = {
 'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
 'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
@@ -29,3 +29,8 @@ gencode = {
 'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L',
 'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_',
 'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W'}
+
+# printing codon one two and three
+print(f"codon_one ({codon_one}) amino acid is {gencode[codon_one]}.")
+print(f"codon_two ({codon_two}) amino acid is {gencode[codon_two]}.")
+print(f"codon_three ({codon_three}) amino acid is {gencode[codon_three]}.")
